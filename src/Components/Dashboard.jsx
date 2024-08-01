@@ -1,9 +1,20 @@
-const Dashboard = () =>{
+const Dashboard = ({userData}) =>{
+    const movie = userData.movie
+    const movieData = localStorage.getItem('userData')
+    console.log(movieData);
+    
     return(
         <div className="">
-        <h1 className="text-red-600">h1</h1>
-        <button className="btn">btn</button>
-        <div></div>
+       
+        {userData.name}
+       {movie.map((item, index)=>{
+        return(
+            <div key={index}>
+                {item}
+                </div>
+        )
+       })}
+     
         </div>
     )
 }
