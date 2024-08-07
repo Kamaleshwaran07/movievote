@@ -14,6 +14,9 @@ const Dashboard = ({userData}) =>{
     return(
         <div className="">
        
+     
+     
+       
         {userData.name}
        {movie.map((item, index)=>{
         return(

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import BlurIn from "../src/Components/magicui/blur-in";
 import Boys from '../src/assets/theboys.png'
 import Hod from '../src/assets/HOD (1) 1.png'
