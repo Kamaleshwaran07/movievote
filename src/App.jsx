@@ -7,12 +7,14 @@ import Signup from './Components/Signup';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Home';
+import Login from './Components/Login';
 
 const App = () =>{
   const baseurl = 'http://localhost:5040'
 // const [data, setData] = useState([])
 const [changeTheme, setChangeTheme] = useState(false)
 const [show, setShow] = useState(false)
+const [userData, setUserData] = useState('')
 
 // const options = {
 //   method: 'GET',
@@ -45,19 +47,20 @@ const [show, setShow] = useState(false)
 // },[])
 // fetchdata()
   return(
-    <div className='h-screen' data-theme={changeTheme ? "dark" : "mytheme"}>
+    <div className='h-screen' data-theme={changeTheme ? "night" : "mytheme"}>
        
       <Navbar setChangeTheme = {setChangeTheme} changeTheme = {changeTheme} show = {show} setShow={setShow} />
-      <BrowserRouter>
+     
       <Routes>
         <Route path='/signup' element={<Signup baseurl={baseurl} navbarShow = {show} />}  />
-        <Route path='/dasboard' element={<Dashboard baseurl={baseurl} />} />
+        <Route path='/login' element={<Login baseurl={baseurl} navbarShow = {show}  setUserData = {setUserData} />}  />
+        <Route path='/dashboard' element={<Dashboard baseurl={baseurl} navbarShow = {show} userData = {userData} />} />
 
-     <Route path='/' element={<Home />} />
+     <Route path='/' element={<Home navbarShow = {show} />} />
         
       </Routes>
       
-      </BrowserRouter>
+      
     {/* <Footer /> */}
     </div>
   )

@@ -1,13 +1,14 @@
 import { useState } from "react"
 import burgerMenu from "../assets/burger-bar.png"
 import burgerOpen from "../assets/burgerClose.png"
+import { Link } from "react-router-dom"
 
 
 const Navbar = ({setChangeTheme, changeTheme, show, setShow}) =>{
    
 return(
 <div className="flex items-center h-12 static">
-    <a href="/" className="text-lg ms-4 font-semibold text-accent">Movievote</a>
+    <a href="/" className="text-lg ms-4 font-semibold">Movievote</a>
     <div className="ms-auto">
 
     <input
@@ -24,7 +25,8 @@ return(
 }</button>
    
     <ul className={show ? "visible z-10 bg-black/70 text-base-100 drop-shadow right-0 top-9 w-full bg-base-100 h-[20rem] absolute p-2" : "hidden"}>
-    <li className="flex font-semibold">Switch Theme
+    <li className="flex font-semibold">
+      <Link to={"/login"}>Login</Link>
    
     </li>
     </ul>

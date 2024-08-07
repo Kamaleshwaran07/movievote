@@ -1,9 +1,28 @@
-const Dashboard = () =>{
+
+import dotenv from 'dotenv'
+
+
+
+const Dashboard = ({userData}) =>{
+    const movie = userData.movie
+    const cookie = document.cookie
+    // const token = jwt.verify(cookie.token, process.env.secret)
+    // console.log(token);
+    
+    
+    
     return(
         <div className="">
-        <h1 className="text-red-600">h1</h1>
-        <button className="btn">btn</button>
-        <div></div>
+       
+        {userData.name}
+       {movie.map((item, index)=>{
+        return(
+            <div key={index}>
+                {item}
+                </div>
+        )
+       })}
+     
         </div>
     )
 }

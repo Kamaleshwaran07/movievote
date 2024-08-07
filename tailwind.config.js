@@ -10,7 +10,24 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
+  daisyui:{
+    themes:[{
+      mytheme:{
+        "primary":"#070600",
+        "secondary":"#EA526F",
+        "accent":"#279AF1",
+        "neutral":"#23B5D3",
+        "base-100":"#F7F7FF"
+      },
+     
+    },
+    "night",],
+  },
   theme: {
+    fontFamily:{
+      sans:['Mukta', 'sans-serif']
+    },
+    
     container: {
       center: true,
       padding: "2rem",
@@ -40,10 +57,6 @@ module.exports = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
