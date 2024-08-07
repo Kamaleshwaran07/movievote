@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Home';
 import Login from './Components/Login';
+import ContactUs from './Components/Contactus';
 
 const App = () =>{
   const baseurl = 'http://localhost:5040'
@@ -53,6 +54,7 @@ const [userData, setUserData] = useState('')
      
       <Routes>
         <Route path='/signup' element={<Signup baseurl={baseurl} navbarShow = {show} />}  />
+        <Route path='/contactus' element={<ContactUs baseurl={baseurl} navbarShow = {show} />}  />
         <Route path='/login' element={<Login baseurl={baseurl} navbarShow = {show}  setUserData = {setUserData} />}  />
         <Route path='/dashboard' element={<Dashboard baseurl={baseurl} navbarShow = {show} userData = {userData} />} />
 

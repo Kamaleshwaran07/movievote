@@ -25,8 +25,17 @@ return(
 }</button>
    
     <ul className={show ? "visible z-10 bg-black/70 text-base-100 drop-shadow right-0 top-9 w-full bg-base-100 h-[20rem] absolute p-2" : "hidden"}>
-    <li className="flex font-semibold">
+    <li className="flex font-semibold" onClick={()=>setShow(!show)}>
       <Link to={"/login"}>Login</Link>
+     
+   
+    </li> <li className="flex font-semibold" onClick={()=>setShow(!show)}>
+      <Link to={"/signup"}>Signup</Link>
+     
+   
+    </li> <li className="flex font-semibold" onClick={()=>setShow(!show)}>
+      <Link to={"/contactus"}>Contact Us</Link>
+     
    
     </li>
     </ul>
