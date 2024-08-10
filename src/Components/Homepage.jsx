@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import BlurIn from "../src/Components/magicui/blur-in";
-import Boys from '../src/assets/theboys.png'
-import Hod from '../src/assets/HOD (1) 1.png'
+import Boys from '../assets/theboys.png'
+import Hod from '../assets/HOD (1) 1.png'
 // import Kill from '../src/assets/Kill.png'
-import Maharaja from '../src/assets/Maharaja 1.png'
-import DOW from '../src/assets/DeadpoolandWolverine.png'
+import Maharaja from '../assets/Maharaja 1.png'
+import DOW from '../assets/DeadpoolandWolverine.png'
 
 
 
-const Home = ({navbarShow}) =>{
+const Homepage = ({navbarShow}) =>{
     const [currentIndex, setCurrentIndex] = useState(0)
     const data = [{img:Boys,title:"The Boys", watchSource:"Amazon Prime"},{img:Hod, title:"House of the Dragon", watchSource:"JioCinema"},{img:DOW, title:"Deadpool and Wolverine", watchSource:"In Theatres. Later in Disney Hotstar"},{img:Maharaja, title:"Maharaja", watchSource:"Netflix"}]
     // console.log(data)
@@ -54,4 +53,4 @@ const Home = ({navbarShow}) =>{
         </div>
     )
 }
-export default Home
+export default Homepage
