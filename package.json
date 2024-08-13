@@ -6,9 +6,10 @@
   "scripts": {
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "start": "npm index.js",
-    "deve": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cookie-parser": "^1.4.6",
@@ -19,6 +20,7 @@
     "lru-cache": "^11.0.0",
     "lucide-react": "^0.417.0",
     "mongoose": "^8.5.1",
+    "nanoid": "^5.0.7",
     "nodemon": "^3.1.4",
     "seedrandom": "^3.0.5"
   },
